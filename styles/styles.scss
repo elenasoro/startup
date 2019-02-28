@@ -1,0 +1,611 @@
+@import 'variables';
+@import 'header';
+@import 'mixins';
+@import 'footer';
+
+.services{
+  width: 80%;
+  margin: 0 auto;
+  @include block-title;
+}
+
+  .services__container{
+    display: flex;
+    justify-content: space-between;
+  }
+    .services__block{
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2{
+        font-size: 14px;
+        font-family: $font;
+        color: $color-text;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      p{
+        font-size: 12px;
+        font-family: $font;
+        color: $color-text;
+        line-height: 1.5;
+        margin-bottom: 100px;
+      }
+    }
+    .services__ellipse{
+      border: 2px solid #e0e0e0;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      img{
+        width: 60px;
+      }
+    }
+      .services__ellipse_red{
+        background-color: $color-red;
+      }
+
+.about_us{
+  background-color: #f8f8f8;
+
+}
+  .about_us__container{
+    width: 80%;
+    margin: 0 auto;
+    @include block-title;
+  }
+  .about_us__text{
+    display: flex;
+    justify-content: space-between;
+    p{
+      display: block;
+      width: 48%;
+      text-align: left;
+      font-size: 14px;
+    }
+  }
+  .about_us__team{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+  }
+  .about_us__team_member{
+      width: 24%;
+
+    h4{
+      font-size: 14px;
+      font-family: $font;
+      color: $color-text;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 20px;
+
+    }
+    p{
+      font-size: 12px;
+      font-family: $font;
+      color: $color-text;
+    }
+  }
+
+
+
+  .about_us__photo{
+
+    height: 260px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  .about_us__photo_onhover{
+    position: relative;
+    height: 260px;
+    width: 100%;
+    background-color: grey;
+    bottom: 280px;
+    opacity: 0.5;
+    z-index: 2;
+    display: none;
+    i{
+      color:white;
+      z-index: 3;
+      padding-right: 10px;
+      font-size: 20px;
+      position: relative;
+      top: 200px;
+      &:hover{
+        color: $color-red;
+
+      }
+    }
+
+  }
+
+  .about_us__team_member{
+    list-style-type: none;
+    &:hover{
+      .about_us__photo_onhover{
+        display: block;
+      }
+      h4{
+        margin-top: -260px;
+      }
+    }
+  }
+
+
+  .about_us__photo-khalil{
+    background-image: url('../images/khalil.png');
+
+  }
+  .about_us__photo-john{
+    background-image: url('../images/john.png');
+    justify-content: flex-end;
+  }
+  .about_us__photo-rubel{
+    background-image: url('../images/rubel.png');
+  }
+  .about_us__photo-shamim{
+    background-image: url('../images/shamim.png');
+
+  }
+  .about_us__button-left{
+    width:35px;
+    height: 35px;
+    background-color: $color-red;
+    background-image: url('../images/angle-left.png');
+    background-position: center;
+    background-size: auto 50%;
+    background-repeat: no-repeat;
+  }
+  .about_us__button-right{
+    @extend .about_us__button-left;
+    background-image: url('../images/angle-right.png');
+  }
+
+
+.works__container{
+
+  width: 80%;
+  margin: 0 auto;
+  @include block-title;
+
+}
+.works__list{
+  li{
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 75px;
+    color: $color-text;
+    font-size: 16px;
+    font-family: $font;
+    &:hover{
+      color: $color-red;
+    }
+  }
+}
+
+
+.works__example-main1{
+  @include background-image(1);
+  background-size: cover;
+
+
+  height: 320px;
+  width: 300px;
+
+  margin-left: 30px;
+  margin-bottom: 30px;
+
+}
+
+.works__example-hover{
+  height: 320px;
+  width: 300px;
+  background-color: $color-red;
+  opacity: 0.7;
+  position: relative;
+  left: 30px;
+  bottom: 350px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.works__example{
+  
+  &:hover{
+      margin-bottom: -320px;
+    .works__example-hover{
+      display: block;
+
+    }
+}
+}
+
+
+
+.works__hover-block{
+
+  z-index: 10;
+  color: white;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 100px;
+
+  h4{
+    font-family: $font;
+    font-size: 18px;
+
+  }
+  p{
+    color: white;
+    font-size: 12px;
+    font-family: $font;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  button{
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color: white;
+    color: $color-red;
+    font-size: 16px;
+    font-weight: bold;
+
+  }
+}
+
+
+
+.works__example-main2{
+  @extend .works__example-main1;
+  @include background-image(2);
+
+}
+.works__example-main3{
+  @extend .works__example-main1;
+  @include background-image(3);
+
+}
+.works__example-main4{
+  @extend .works__example-main1;
+  @include background-image(6);
+
+}
+.works__example-main5{
+  @extend .works__example-main1;
+  @include background-image(7);
+
+}
+.works__example-main6{
+  @extend .works__example-main1;
+  @include background-image(6);
+
+}
+.works__example-main7{
+  @extend .works__example-main1;
+  @include background-image(7);
+
+}
+.works__example-main8{
+  @extend .works__example-main1;
+  @include background-image(8);
+
+}
+.works__example-main9{
+  @extend .works__example-main1;
+  @include background-image(9);
+
+}
+.works__examples{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 100px;
+
+  }
+
+
+.works__row{
+  display: flex;
+  justify-content: center;
+  margin-bottom: -320px;
+}
+
+.call-to-action{
+  background-image: url('../images/call.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 370px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &:before{
+    content: '';
+    position: absolute;
+
+    background-color: $color-red;
+    opacity: 0.5;
+    z-index: 2;
+    display: block;
+    height: 370px;
+    width: 100%;
+  }
+  h2{
+    font-size: 30px;
+    font-family: $font;
+    font-weight: bold;
+    margin-bottom: 20px;
+    z-index: 3;
+  }
+  p{
+    font-size: 30px;
+
+    z-index: 3;
+  }
+  button{
+    z-index: 3;
+    @include button;
+  }
+}
+
+
+.blog__container{
+  @include block-title;
+  width: 80%;
+  margin: 0 auto;
+}
+.blog__posts{
+  margin-bottom: 100px;
+}
+.blog__post{
+  display:flex;
+  margin-bottom: 40px;
+
+  img{
+    width: 50%;
+    height: auto;
+    margin-right: 40px;
+  }
+
+}
+.blog__post_first{
+  padding-bottom: 40px;
+  border-bottom: 1px solid #dddddd;
+}
+.blog__post-title{
+  display: flex;
+}
+.blog__article{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  a{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $color-text;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+.blog__date{
+  width: 76px;
+  height: 76px;
+  border: 2px solid #555555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  margin-right: 30px;
+
+  p{
+    font-size: 24px;
+    font-family: $font;
+    text-transform: uppercase;
+    color: #777777;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0px;
+
+  }
+}
+    .blog__month{
+      font-size: 20px;
+      font-weight: normal;
+
+    }
+
+    .blog__heading{
+      h3{
+        font-size: 13px;
+        text-transform: uppercase;
+        color: $color-text;
+        margin-bottom: 20px;
+        margin-top: 15px;
+        font-family: $font;
+        font-weight: bold;
+        &:hover{
+          color: $color-red;
+        }
+      }
+      p{
+        font-size: 13px;
+        font-style: italic;
+        color: #a2a2a2;
+        margin-bottom: 45px;
+      }
+    }
+
+.hover-red:hover{
+  color: $color-red;
+}
+
+    .blog__content{
+      p{
+        font-size: 14px;
+        margin-bottom: 36px;
+      }
+
+    }
+
+.clients{
+  background-color: #f8f8f8;
+  padding-bottom: 100px;
+}
+
+  .clients__logos{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 200px;
+    align-items: center;
+  }
+
+  .clients__feedback{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    p:first-child{
+      font-style: italic;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .clients__author{
+      font-size: 14px;
+      font-family: $font;
+      margin-bottom: 30px;
+    }
+  }
+  .clients__ellipses{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+
+  }
+  .clients__ellipse{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #dddddd;
+    margin-right: 10px;
+  }
+  .clients__ellipse_active{
+    background-color: $color-red;
+  }
+
+.contact__container{
+  @include block-title;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact__container-form{
+  display: flex;
+  justify-content: space-between;
+}
+.contact__info{
+  text-align: left;
+  margin-right: 100px;
+}
+.contact__info_block{
+  width: 210px;
+  i{
+    color: $color-text;
+    position: relative;
+    top: 15px;
+    right: 20px;
+  }
+  h4{
+    text-transform: uppercase;
+    color: $color-text;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  p{
+    font-size: 12px;
+    color: #a0a0a0;
+    margin-bottom: 40px;
+  }
+}
+
+.contact__form{
+  display: flex;
+  flex-wrap: wrap;
+  input{
+    width: 40%;
+    height: 45px;
+    margin-right: 30px;
+    outline:none;
+    box-sizing: border-box;
+    border: 1px solid #555555;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-left: 10px;
+
+
+    &:focus{
+      border: 1px solid $color-red;
+    }
+  }
+  textarea{
+    @extend input;
+    width: 84%;
+    height: 100px;
+    padding-top: 10px;
+  }
+  button{
+    @extend input;
+    width: 170px;
+    color: #555555;
+  }
+  p{
+    font-size: 12px;
+    color: #555555;
+    margin-top: 15px;
+  }
+  span{
+    color: $color-red;
+  }
+}
+
+
+
+@import 'media';
+
+
+.works__examples {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 100px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

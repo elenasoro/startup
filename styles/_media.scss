@@ -1,0 +1,88 @@
+@media (max-width: 799px) {
+
+//Styles for header
+
+  .header__menu-list{
+    flex-direction: column;
+    li{
+      margin-right: 0px;
+      margin-top: 20px;
+    }
+  }
+  .header__nav{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__title{
+    margin-top: 100px;
+  }
+
+//Styles for services block
+
+  .services__container{
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .services__block{
+    width: 80%;
+  }
+
+
+//Styles for services block
+
+  .about_us__text{
+    flex-direction: column;
+    align-items: center;
+    p{
+      width: 100%;
+    }
+  }
+  .about_us__team{
+    flex-direction: column;
+    align-items: center;
+  }
+  .about_us__team_member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    img{
+      width: 300px;
+    }
+  }
+  .about_us__photo_onhover{
+    width: 280px;
+  }
+
+//Styles for blog block
+
+.blog__post{
+  flex-direction: column;
+  align-items: center;
+  img{
+    margin-bottom: 30px;
+    width: 80%;
+  }
+}
+
+.contact__container-form{
+  flex-direction: column;
+  align-items: center;
+}
+.contact__info{
+  width: 50%;
+
+}
+
+.contact__form{
+  flex-direction: column;
+  input{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+}

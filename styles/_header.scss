@@ -1,0 +1,74 @@
+@import 'mixins';
+header{
+  background-image: url('../images/head.png');
+  background-size: cover;
+  height: 770px;
+  box-sizing: border-box;
+}
+
+.header__container{
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+  padding-bottom: 260px;
+}
+header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.4);
+  z-index: 2;
+  height: 770px;
+}
+
+  .header__logo{
+    font-family: $font;
+    font-size: 24px;
+    font-weight: bold;
+
+  }
+ .header__nav{
+   width: 80%;
+   margin: 0 auto;
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   padding-top: 50px;
+   z-index: 30;
+ }
+ .header__menu-list{
+   display: flex;
+   li{
+     display: inline-block;
+     font-family: $font;
+     font-size: 14px;
+     margin-right: 20px;
+   }
+ }
+
+  .header__title{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 260px;
+
+    text-align: center;
+    color: white;
+
+    h1{
+      font-family: $font;
+      font-size: 48px;
+      font-weight: bold;
+    }
+    p{
+      margin-top: 37px;
+      font-family: $font;
+      font-size: 20px;
+    }
+    button{
+    @include button;
+    }
+  }
